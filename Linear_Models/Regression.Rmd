@@ -1,0 +1,62 @@
+---
+title: "Regression"
+author: "Kyle Chan, Ryan Banafshay"
+utput:
+    html_document:
+    df_print: paged
+    pdf_document: default
+output:
+    html_document:
+    df_print: paged
+editor_options:
+    chunk_output_type: inline
+---
+https://www.kaggle.com/datasets/nancyalaswad90/diamonds-prices
+```{r}
+library(tidyverse)
+data <- read.csv(file = "Linear_Models/Diamonds Prices2022.csv")
+str(data)
+summary(data)
+```
+
+```{r}
+par(mfrow=c(1,1))
+plot(data$price~data$carat, xlab= "Carat", ylab= "Cost", pch=25, bg=c("aquamarine1"))
+abline(lm(diamonds$price~diamonds$carat), col = "red")
+```
+
+```{r}
+set.seed(1234)
+split <- sample(1:nrow(data), nrow(data)*0.8, replace = FALSE)
+train <- data[split,]
+test <- data[-split,]
+```
+
+```{r}
+par(mfrow=c(1,1))
+train$large <- factor(ifelse(train$carat>2,1,0))
+plot(train$carat, train$price, xlab = "Carat", ylab = "Cost", pch=25, bg=c("aquamarine1","blue")[unclass(train$large)])
+```
+
+```{r}
+par(mfrow=c(1,2))
+carat_den <- density(train$carat, na.rm = TRUE)
+plot(carat_den, main = "Carat Density", xlab = "Carat")
+polygon(carat_den, col ="wheat")
+
+cost_den <- density(train$price, na.rm = TRUE)
+plot(cost_den, main = "Cost Density", xlab = "Cost")
+polygon(cost_den, col ="slategrey")
+```
+
+```{r}
+summary(train$carat)
+summary(train$price)
+range(train$carat)
+range(train$price)
+
+cor(train$carat, train$price, use = "complete.obs")
+```
+```{r}
+
+```
