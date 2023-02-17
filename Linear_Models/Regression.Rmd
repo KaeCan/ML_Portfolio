@@ -22,7 +22,7 @@ summary(data)
 ```{r}
 par(mfrow=c(1,1))
 plot(data$price~data$carat, xlab= "Carat", ylab= "Cost", pch=25, bg=c("aquamarine1"))
-abline(lm(diamonds$price~diamonds$carat), col = "red")
+abline(lm(data$price~data$carat), col = "red")
 ```
 
 ```{r}
@@ -58,5 +58,11 @@ range(train$price)
 cor(train$carat, train$price, use = "complete.obs")
 ```
 ```{r}
+lm1 <- lm(carat~price, data=data)
+summary(lm1)
+```
+
+```{r}
+
 
 ```
