@@ -33,6 +33,14 @@ test <- data[-split,]
 ```
 
 ```{r}
+sum(train$carat<=1)
+sum(train$carat<=2 & train$carat>1)
+sum(train$carat<=3 & train$carat>2)
+sum(train$carat<=4 & train$carat>3)
+sum(train$carat>4)
+```
+
+```{r}
 par(mfrow=c(1,1))
 train$large <- factor(ifelse(train$carat>2,1,0))
 plot(train$carat, train$price, xlab = "Carat", ylab = "Cost", pch=25, bg=c("aquamarine1","blue")[unclass(train$large)])
@@ -63,6 +71,35 @@ summary(lm1)
 ```
 
 ```{r}
+par(mfrow=c(2,2))
+plot(lm1)
+```
 
+```{r}
+lm2 <- lm(price~carat+depth+table, data=train)
+summary(lm2)
+```
 
+```{r}
+par(mfrow=c(2,2))
+plot(lm2)
+```
+
+```{r}
+par(mfrow=c(1,1))
+outliers <- boxplot(train$carat, plot=TRUE)$out
+
+min(outliers)
+length(outliers)
+```
+
+```{r}
+no_outliers_data <- subset(train, carat < 2.01)
+lm3 <- lm(price~carat+depth+table+cut+clarity, data=no_outliers_data)
+summary(lm3)
+```
+
+```{r}
+par(mfrow=c(2,2))
+plot(lm3)
 ```
