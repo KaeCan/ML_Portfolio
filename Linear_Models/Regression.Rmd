@@ -2,14 +2,15 @@
 title: "Regression"
 author: "Kyle Chan, Ryan Banafshay"
 utput:
-    html_document:
-    df_print: paged
-    pdf_document: default
+  pdf_document: default
+  df_print: paged
+  html_document: null
 output:
-    html_document:
-    df_print: paged
+  html_document: null
+  df_print: paged
+  pdf_document: default
 editor_options:
-    chunk_output_type: inline
+  chunk_output_type: inline
 ---
 For regression, we used a [dataset](https://www.kaggle.com/datasets/nancyalaswad90/diamonds-prices) that contains information on 54,000 diamonds
 
@@ -61,6 +62,7 @@ cost_den <- density(train$price, na.rm = TRUE)
 plot(cost_den, main = "Cost Density", xlab = "Cost")
 polygon(cost_den, col ="slategrey")
 ```
+
 Here are some more functions to further explore our dataset.
 ```{r}
 summary(train$carat)
@@ -86,10 +88,13 @@ plot(lm1)
 
 **Residuals vs Fitted**
 (1) We can see that most datapoints are scattered realtively equally and randomly around the horizontal line 0, meaning that there is a high chance the relationship between carats and price is linear.
+
 **Normal Q-Q**
 (2) The data largely follows the line, indicating a normal distribution. However, the deviations on the ends of either side may indicate some skew and heavy tails.
+
 **Scale-Location**
 (3) The residuals are mostly randomly scattered along the prediction. This shows that we generally maintain equal variance across our data.
+
 **Residuals vs Leverage**
 (4) Our residual vs leverage plot demonstrate we have a few strongly influential datapoints. We can attribute these as outliers in our data.
 
