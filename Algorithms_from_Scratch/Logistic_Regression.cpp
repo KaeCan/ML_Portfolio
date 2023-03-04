@@ -240,7 +240,7 @@ int main(int argc, char** argv){
 
     cout << "Time to train: " << chrono::duration_cast<chrono::milliseconds>(end - start).count() << " ms" << endl;
     
-    //cout << "Weight: " << weights_vect[0] << endl;
+    cout << "Weight: " << weights_vect[0] << endl;
     
     double men_survived, men_dead, women_survived, women_dead = 0;
 
