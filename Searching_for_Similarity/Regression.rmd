@@ -19,7 +19,7 @@ First, we begin by reading in the data set and dividing our data into an 80/20 t
 unpopular_songs <- read.csv('unpopular_songs.csv')
 
 set.seed(1234)
-train_index <- sample(1:nrow(unpopular_songs), size = 0.8*nrow(unpopular_songs), replace = FALSE)
+train_index <- sample(1:nrow(unpopular_songs), size = 0.8*nrow(unpopular_songs), replace = FALSE) # nolint
 train <- unpopular_songs[train_index, ]
 test <- unpopular_songs[-train_index, ]
 ```
@@ -30,7 +30,7 @@ test <- unpopular_songs[-train_index, ]
 Next, take in variables and return a linear regression model that predicts popularity. We will also print the summary.
 
 ```{r}
-lm1 <- lm(popularity ~ danceability+energy+key+key+loudness+speechiness+acousticness+liveness+valence+tempo+duration_ms, data = train)
+lm1 <- lm(popularity ~ danceability+energy+key+key+loudness+speechiness+acousticness+liveness+valence+tempo+duration_ms, data = train) # nolint
 summary(lm1)
 par(mfrow=c(1,1))
 plot(fitted(lm1), resid(lm1), main = 'Linear Regression')
