@@ -43,3 +43,8 @@ I explore how to use sklearn in Python to perform data exploration, visualize ou
 ## [Image Classification](https://github.com/KaeCan/ML_Portfolio/blob/main/Image_Classification/image_classification.pdf)
 
 My partner and I explore classification using a dataset of images. We attempt to fit various models and make improvements based on observations and our understanding of neural networks.
+
+---
+## Summary
+
+Going to Intro to Machine Learning, I had little expectations for how much more I would learn. Prior, I had completed the course, Human Language Technologies, which focused on NLP (Natural Language Processing) and as a result learned a moderate amount about how machine learning algorithms work. After finishing this course, however, I realize I have learned so much more. I believe I truly understand the algorithms I have been taught, and I understand when and where to use them with respect to varying circumstances. As of the time of writing this (April 2023), I am already utilizing my knowledge of ML and NLP to create modern applications that incorporate these techniques that I have learned over this year. I expect that, in the future, machine learning and NLP will continue to heavily influence the world, and I see myself contributing in this aspect. I look forward to working in companies that embrace the potential of AI, ML, and NLP, as I truly enjoy these topics and will continue to learn more on my own.
