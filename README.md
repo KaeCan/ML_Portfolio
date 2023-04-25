@@ -2,7 +2,7 @@
 ML Portfolio for CS4375
 
 ---
-## [Skills and Topics]()
+## [Skills and Topics](https://github.com/KaeCan/ML_Portfolio/blob/main/skills/README.md)
 This is a condensed overview of the various technical skills included in the portfolio, as well as soft skills I used throughout the course.
 
 ---
@@ -28,10 +28,10 @@ Here, I explore how to program simple versions of machine learning algorithms in
 ## [Similarity and Ensemble](https://github.com/KaeCan/ML_Portfolio/tree/main/Searching_for_Similarity)
 This project comprises four different documents that explore the various ways to search for similarity in a dataset:
 
-- [Regression]()
-- [Classification]()
-- [Clustering]()
-- [Dimensionality Reduction]()
+- [Regression](https://github.com/KaeCan/ML_Portfolio/blob/main/Searching_for_Similarity/Regression.pdf)
+- [Classification](https://github.com/KaeCan/ML_Portfolio/blob/main/Searching_for_Similarity/Classification.pdf)
+- [Clustering](https://github.com/KaeCan/ML_Portfolio/blob/main/Searching_for_Similarity/Clustering.pdf)
+- [Dimensionality Reduction](https://github.com/KaeCan/ML_Portfolio/blob/main/Searching_for_Similarity/Dimensionality_Reduction.pdf)
 
 ---
 ## [Python ML with sklearn](https://github.com/KaeCan/ML_Portfolio/blob/main/sklearn/ML_with_sklearn.pdf)
